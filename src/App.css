@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.pre-view {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -35,4 +46,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-app{
+  text-align: left;
+  font-size: 45px;
+  margin-bottom: 15px;
 }
