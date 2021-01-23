@@ -6,7 +6,8 @@ const TodoContext = createContext({
     addItem: () => { },
     onDone: () => { },
     onDeleteTodo: () => { },
-    filterItem: () => { }
+    filterItem: () => { },
+    toggleAll: () => { }
 })
 
 export default TodoContext

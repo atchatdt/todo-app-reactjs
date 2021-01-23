@@ -53,6 +53,28 @@ const TodosProvider = ({ children }) => {
             }
         }
     }
+
+    const toggleAll = () => {
+        if(todoList.length >0){
+            
+            let status = !todoList[0].status
+            for (let i = 0; i < todoList.length; i++) {
+                todoList[i].status = status
+            }
+            let todos = localStorage.getItem('todos')
+            todos = JSON.parse(todos);
+            for (let i = 0; i < todos.length; i++) {
+                for (let j = 0; j < todoList.length; j++) {
+                    if (todos[i].id === todoList[j].id) {
+                        todos[i] = todoList[j]
+                    }
+                }
+            }
+            settodoList([].concat(todoList))
+            localStorage.setItem('todos', JSON.stringify(todos))
+
+        }
+    }
     return (
         <TodoContext.Provider
             value={{
@@ -60,7 +82,8 @@ const TodosProvider = ({ children }) => {
                 addItem,
                 onDone,
                 onDeleteTodo,
-                filterItem
+                filterItem,
+                toggleAll
             }}
         >
             {children}

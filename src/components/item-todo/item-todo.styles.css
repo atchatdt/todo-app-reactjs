@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -29,4 +30,9 @@
 
 .todo-final{
   filter: contrast(0.5);
+}
+
+.name-todo{
+  max-width: 330px;
+  word-wrap: break-word!important;
 }

@@ -9,7 +9,7 @@
 }
 .item-control {
   padding: 10px 20px;
-  border: 1px solid;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -18,10 +18,25 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   font-size: 20px;
 }
-.item-control-active{
-    background-color: #3ca253b5;
-    color: #fff;
+.item-control-active {
+  background-color: #72b663;
+  color: #fff;
+}
+.toggleall {
+  text-align: left;
+  margin: 10px 0 20px 0;
+  cursor: pointer;
+}
+.toggleall span {
+  font-size: 20px;
+  padding: 7px 10px;
+  background-color: #518ac6;
+  color: #fff;
+  border-radius: 5px;
+}
+.blog-control {
+  width: 90%;
 }
