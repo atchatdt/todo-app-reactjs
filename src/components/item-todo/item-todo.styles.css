@@ -12,8 +12,6 @@
   margin-right: 20px;
 }
 
-.name-todo {
-}
 .delete-todo {
   cursor: pointer;
   background-color: red;
@@ -27,4 +25,8 @@
   display: flex;
   /* width: 45%; */
   justify-content: space-around;
+}
+
+.todo-final{
+  filter: contrast(0.5);
 }

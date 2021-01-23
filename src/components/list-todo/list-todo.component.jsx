@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import ItemTodo from "../item-todo/item-todo.component";
+import TodosContext from '../../todo-context/todos.context';
 
 import './list-todo.styles.css';
 
 const ListItem = () => {
-    const [listTodo] = useState([1, 2, 3])
+    const { todoList } = useContext(TodosContext)
     return (
         <div className="list-todo">
             {
-                listTodo.map((item, idx) => <ItemTodo key={idx} />)
+                (todoList.length > 0)?
+                (todoList.map((item, idx) => <ItemTodo key={idx} item={item} />)):
+                <div className="empty">Không có công việc nào</div>
             }
         </div>
     )
